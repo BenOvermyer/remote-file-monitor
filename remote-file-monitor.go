@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-  var port = os.Getenv("RMF_PORT")
+  var port = os.Getenv("RFM_PORT")
   if (len(port) == 0) {
     port = "8090"
   }

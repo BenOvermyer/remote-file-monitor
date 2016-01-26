@@ -2,7 +2,7 @@
 
 A simple web service written in Go to monitor a remote file.
 
-It defaults to running on port 8090, but you can change this by setting the `RMF_PORT` environment variable. For example: `RMF_PORT=9993 remote-file-monitor`
+It defaults to running on port 8090, but you can change this by setting the `RFM_PORT` environment variable. For example: `RFM_PORT=9993 remote-file-monitor`
 
 ## /size
 
