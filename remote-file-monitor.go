@@ -4,11 +4,16 @@ import (
     "fmt"
     "net/http"
     "io/ioutil"
+    "os"
 )
 
 func main() {
+  var port = os.Getenv("RMF_PORT")
+  if (len(port) == 0) {
+    port = "8090"
+  }
   http.HandleFunc("/size", sizeHandler)
-  http.ListenAndServe(":8090", nil)
+  http.ListenAndServe(":" + port, nil)
 }
 
 func sizeHandler(w http.ResponseWriter, r *http.Request) {
